@@ -1,0 +1,66 @@
+Flutter 2024
+Instractor: Mahamudul Hasan
+--------------------------------------------->
+
+Dart Introduction
+--------------------------------------------->
+    # Dart Installation
+    # Variables
+    # Operators
+    # Data Types
+    # Loops
+    # Conditions
+    # Functions
+    # Collections
+    # OOP
+    # Asynchronous Programming
+
+
+
+--------------------------------------------->
+Flutter Module
+--------------------------------------------->
+Basic:
+    # Flutter Widgets
+    # Layouts
+    # Colors & Styling
+    # Implementing Functions
+
+Intermediate:
+    # Navigations
+    # Reusable Custom Widgets
+    # Responsive UI
+    # Networking
+    # State Managements
+
+Advance:
+    # Local Database
+    # Local Authentication
+    # Firebase
+    # External Packages
+    # Build Own Custom Packages
+    # Deploy Own Package In Pub.dev
+
+--------------------------------------------->
+External Packages
+--------------------------------------------->
+1. flutter_svg
+2. cached_network_image
+3. url_launcher
+4. carousel_slider
+5. photo_view
+6. flutter_datetime_picker
+7. flutter_rating_bar
+8. fluttertoast
+9. flutter_form_builder
+10. flutter_staggered_grid_view
+11. font_awesome_flutter
+12. flutter_launcher_icons
+13. animations
+14. flutter_slidable
+15. connectivity
+16. path_provider
+17. shared_preferences
+18. flutter_local_notifications
+19. flutter_sound
+20. flutter_blue

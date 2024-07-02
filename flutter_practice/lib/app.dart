@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_practice/screens/home_screen.dart';
+import 'package:flutter_practice/screens/covid_screen.dart';
+import 'package:flutter_practice/screens/screen_wrapper.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -9,7 +10,11 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Practice Flutter',
-      home: HomeScreen(),
+      routes: {
+        '/': (context)=> ScreenWrapper(),
+        '/covid': (context)=> const CovidScreen()
+      },
+        initialRoute: '/'
     );
   }
 }

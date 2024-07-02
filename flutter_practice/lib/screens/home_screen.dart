@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_practice/controllers/home_controller.dart';
+import 'package:flutter_practice/screens/covid_screen.dart';
 import 'package:flutter_practice/utils/asset_manager.dart';
 import 'package:flutter_practice/utils/style.dart';
 
@@ -163,7 +164,7 @@ class HomeScreen extends StatelessWidget {
                           hintStyle: TextStyle(color: Style.SECONDARY_COLOR),
                           border: InputBorder.none),
 
-                      onSubmitted: (value)=> controller.searchItem(value),
+                      onSubmitted: (v)=> controller.searchItem(v),
 
 
                     ),
@@ -174,16 +175,21 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 20,),
             // Action
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    CircleAvatar(
-                      backgroundColor: Style.SEMI_WHITE_COLOR,
-                      radius: 40,
-                      child: Icon(Icons.sunny, color: Style.SECONDARY_COLOR,),
+                    InkWell(
+                      onTap:(){
+                        Navigator.of(context).pushReplacementNamed('/covid');
+                      },
+                      child: const CircleAvatar(
+                        backgroundColor: Style.SEMI_WHITE_COLOR,
+                        radius: 40,
+                        child: Icon(Icons.sunny, color: Style.SECONDARY_COLOR,),
+                      ),
                     ),
 
                     SizedBox(height: 6,),
@@ -237,18 +243,6 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: NavigationBar(
-        backgroundColor: const Color(0xffFFFFFF),
-        indicatorColor: Style.PRIMARY_TRANSPARENT_COLOR.withOpacity(0.3),
-        labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
-
-        destinations: const [
-        NavigationDestination(icon: Icon(Icons.home_outlined), selectedIcon: Icon(Icons.home_filled), label: 'Home'),
-        NavigationDestination(icon: Icon(Icons.calendar_month_outlined), selectedIcon: Icon(Icons.calendar_month), label: 'Schedule'),
-        NavigationDestination(icon: Icon(Icons.chat_outlined), selectedIcon: Icon(Icons.chat), label: 'Chat'),
-        NavigationDestination(icon: Icon(Icons.account_circle_outlined), selectedIcon: Icon(Icons.account_circle), label: 'Profile'),
-
-      ],),
     );
   }
 }
